@@ -6,194 +6,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/png" href="./giftperch_logo_only.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
       :root {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-        color: #111827;
-        background: #f3f4f6;
+        --gp-evergreen: #0F3D3E;
+        --gp-forest: #13402B;
+        --gp-gold: #D9C189;
+        --gp-cream: #F8F5E0;
+        --gp-sand: #EAE5D3;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--gp-evergreen);
+        background: var(--gp-cream);
       }
+
       body {
         margin: 0;
         min-height: 100vh;
         display: flex;
-        flex-direction: column;   /* stack card + footer vertically */
-        align-items: center;      /* center horizontally */
-        justify-content: center;  /* center them in the viewport */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
+
       .logo-img {
         width: 70px;
         height: 70px;
         object-fit: contain;
       }
+
       .card {
-        background: #ffffff;
-        border: 1px solid #f1f1f1;
+        background: white;
+        border: 1px solid var(--gp-sand);
         border-radius: 20px;
-        padding: 48px 56px; /* increased padding */
+        padding: 48px 56px;
         box-shadow: 0 22px 55px rgba(15, 23, 42, 0.12);
-        max-width: 640px;  /* larger card */
+        max-width: 640px;
       }
+
       .header-row {
         display: flex;
         align-items: center;
         gap: 14px;
         margin-bottom: 12px;
       }
-      .logo-circle {
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        background: #f97316;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-        color: #fff;
-        font-weight: 700;
-      }
+
       h1 {
         font-size: 28px;
         margin: 0;
+        color: var(--gp-evergreen);
       }
+
       p {
         margin: 6px 0;
-        color: #4b5563;
-        line-height: 1.5;
+        color: var(--gp-forest);
+        line-height: 1.55;
       }
+
       .tagline {
         margin-top: 8px;
-        font-weight: 500;
+        font-weight: 600;
+        color: var(--gp-evergreen);
       }
-      .url {
-        margin-top: 14px;
-        font-size: 14px;
-        color: #6b7280;
-      }
+
       .pill {
         display: inline-flex;
         align-items: center;
         gap: 8px;
         border-radius: 999px;
-        padding: 10px 18px;      /* more padding = bigger pill */
-        background: #c7fed7;
-        color: #084e14;
-        font-size: 16px;         /* increase from 12px to 16px */
+        padding: 10px 18px;
+        background: var(--gp-gold);
+        color: var(--gp-forest);
+        font-size: 16px;
         font-weight: 600;
         margin-bottom: 14px;
-        }
+      }
 
       .socials {
         margin-top: 18px;
       }
 
-        .socials-title {
+      .socials-title {
         font-size: 14px;
         font-weight: 600;
-        color: #374151;
+        color: var(--gp-evergreen);
         margin-bottom: 6px;
       }
 
-        .social-list {
+      .social-list {
         list-style: none;
         padding-left: 0;
         margin: 0;
         font-size: 14px;
-        color: #4b5563;
-     }
+        color: var(--gp-forest);
+      }
 
-    .social-list li {
+      .social-list li {
         display: flex;
         align-items: center;
-        gap: 8px;               /* space between icon and text */
-        margin-bottom: 6px;
-    }
-    .social-list i {
+        gap: 10px;
+        margin-bottom: 8px;
+      }
+
+      .social-list i {
         font-size: 18px;
-        width: 20px;            /* fixes alignment since icons vary */
+        width: 20px;
         text-align: center;
-        color: #4b5563;         /* subtle gray */
-    }
-    .social-list a {
-        color: #4f46e5;         /* soft indigo for links */
+        color: var(--gp-evergreen);
+      }
+
+      .social-list a {
+        color: var(--gp-evergreen);
         text-decoration: none;
-        font-weight: 500;
-    }
+        font-weight: 600;
+      }
 
-        .social-list a:hover {
+      .social-list a:hover {
         text-decoration: underline;
-    }
-     .footer {
-      margin-top: 16px;          /* space above footer */
-      margin-bottom: 20px;       /* a bit of breathing room at bottom */
-      text-align: center;
-      font-size: 14px;
-      color: #6b7280;
-    }
+      }
 
+      .footer {
+        margin-top: 16px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: var(--gp-forest);
+      }
 
-        .footer a {
-        color: #4f46e5;  /* soft indigo link color */
+      .footer a {
+        color: var(--gp-evergreen);
         text-decoration: none;
-        font-weight: 500;
-        }
+        font-weight: 600;
+      }
 
-        .footer a:hover {
+      .footer a:hover {
         text-decoration: underline;
-        }
-
+      }
     </style>
   </head>
+
   <body>
     <div class="card">
       <div class="pill">Coming soon</div>
+
       <div class="header-row">
         <img src="./giftperch_logo_only.png" alt="GiftPerch Logo" class="logo-img" />
         <h1>GiftPerch</h1>
       </div>
+
       <p class="tagline">Thoughtful gifting, reimagined with AI</p>
+
       <p>
         GiftPerch helps you remember every important person in your life — their interests, tastes, and past gifts — and uses intelligent AI to recommend thoughtful, personalized presents for any occasion.
-With smart profiles, wishlists, and Amazon-powered suggestions, GiftPerch makes meaningful gifting effortless, organized, and stress-free — year after year.
+        With smart profiles, wishlists, and Amazon-powered suggestions, GiftPerch makes meaningful gifting effortless, organized, and stress-free — year after year.
       </p>
+
       <div class="socials">
-        <p class="socials-title">Follow GiftPerch:</p>
+        <p class="socials-title">Follow GiftPerch for updates:</p>
 
         <ul class="social-list">
-            <li>
-                <i class="fab fa-instagram"></i>
-                <a href="https://instagram.com/giftperch" target="_blank" rel="noopener">@giftperch</a>
-            </li>
-
-            <li>
-                <i class="fab fa-x-twitter"></i>
-                <a href="https://x.com/giftperch" target="_blank" rel="noopener">@giftperch</a>
-            </li>
-
-            <li>
-                <i class="fab fa-youtube"></i>
-                <a href="https://youtube.com/@giftperch" target="_blank" rel="noopener">@giftperch</a>
-            </li>
-
-            <li>
-                <i class="fab fa-pinterest"></i>
-                <a href="https://pinterest.com/giftperch" target="_blank" rel="noopener">@giftperch</a>
-            </li>
-
-            <li>
-                <i class="fab fa-tiktok"></i>
-                <a href="https://tiktok.com/@giftperchapp" target="_blank" rel="noopener">@giftperchapp</a>
-            </li>
+          <li>
+            <i class="fab fa-instagram"></i>
+            <a href="https://instagram.com/giftperch" target="_blank">@giftperch</a>
+          </li>
+          <li>
+            <i class="fab fa-x-twitter"></i>
+            <a href="https://x.com/giftperch" target="_blank">@giftperch</a>
+          </li>
+          <li>
+            <i class="fab fa-youtube"></i>
+            <a href="https://youtube.com/@giftperch" target="_blank">@giftperch</a>
+          </li>
+          <li>
+            <i class="fab fa-pinterest"></i>
+            <a href="https://pinterest.com/giftperch" target="_blank">@giftperch</a>
+          </li>
+          <li>
+            <i class="fab fa-tiktok"></i>
+            <a href="https://tiktok.com/@giftperchapp" target="_blank">@giftperchapp</a>
+          </li>
         </ul>
-
-
-        </div>
+      </div>
     </div>
+
     <footer class="footer">
-        Work in progress by 
-        <a href="https://jasonconklin.dev" target="_blank" rel="noopener">
-            Jason Conklin
-        </a>
+      Work in progress by 
+      <a href="https://jasonconklin.dev" target="_blank">Jason Conklin</a>
     </footer>
   </body>
 </html>
